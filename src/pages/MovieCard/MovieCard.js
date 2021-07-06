@@ -13,7 +13,7 @@ export const MovieCard = ({ movie, addFavorite, favorites, deleteFavorite }) => 
 
   React.useEffect(() => {
     setStatus("loading");
-    fetch(`http://www.omdbapi.com/?s=${movie}&apikey=263d22d8`)
+    fetch(`https://www.omdbapi.com/?s=${movie}&apikey=263d22d8`)
       .then((response) => response.json().then((data) => {
         if (data.Search === null) {
           setStatus("error");
